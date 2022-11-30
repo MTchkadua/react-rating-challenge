@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-rating-challenge/static/css/main.05f62b1e.css",
+    "main.js": "/react-rating-challenge/static/js/main.a870578b.js",
+    "index.html": "/react-rating-challenge/index.html",
+    "main.05f62b1e.css.map": "/react-rating-challenge/static/css/main.05f62b1e.css.map",
+    "main.a870578b.js.map": "/react-rating-challenge/static/js/main.a870578b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.05f62b1e.css",
+    "static/js/main.a870578b.js"
+  ]
+}
