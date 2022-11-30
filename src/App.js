@@ -1,25 +1,43 @@
-import logo from './logo.svg';
+import FirstPage from './FirstPage';
 import './App.css';
+import SecondPage from './SecondPage';
+import { useState } from 'react';
 
 function App() {
+  const [submitClick, setSubmitClick]= useState(false)
+  const [selectNumber, setSelectNumber] = useState(null)
+  const [butCLick, setButClick] = useState(false)
+
+  function submClick (){
+    if (butCLick){
+      setSubmitClick(true)
+    } else (alert("please submit your rate")) 
+  }
+  
+  function click(num){
+    setSelectNumber(num)
+    setButClick(true)
+  }
+
+
+
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={style}>
+
+      {submitClick ?  <SecondPage selectedNumber = {selectNumber}/> : <FirstPage id ={selectNumber} click = {click} submit = {submClick}/>}
+     
     </div>
   );
 }
 
 export default App;
+const style = {
+  width: "100vw",
+  height: "100vh",
+  backgroundColor:"black",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center"
+}
